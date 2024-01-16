@@ -17,7 +17,7 @@ function Form() {
         <div className="max-w-5xl mx-auto bg-white rounded-lg shadow-xl ">
           <div className="flex bg-white rounded-md justify-center items-center mt-5 ">
             <div className="mr-6">
-              <img src={contactimage} alt="image of contact me" />
+              <img src={contactimage} alt="pic of contact me" />
             </div>
           {/* Form */}
             <div className=" md:w-1/3 p-2">

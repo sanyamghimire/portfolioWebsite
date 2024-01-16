@@ -9,7 +9,7 @@ function Card() {
       {/* NTNU */}
       <div className="flex flex-col md:flex-row border border-blue-100 p-6 rounded-lg ">
         <div>
-          <img src={NTNU} alt="Image of NTNU" className="h-32 w-52 rounded-lg " />
+          <img src={NTNU} alt="pic of NTNU" className="h-32 w-52 rounded-lg " />
         </div>
         <div className="ml-6 pt-1">
           <h4 className="font-bold text-xl">Master's in Electronic Systems Design</h4>
@@ -21,7 +21,7 @@ function Card() {
       {/* Pokhara University */}
       <div className="flex flex-col  md:flex-row border border-blue-100 p-6 rounded-lg shadow-xl mt-2.5">
         <div>
-          <img src={PU} alt="Image of PU" className="h-32 w-52 rounded-lg" />
+          <img src={PU} alt="Pic of PU" className="h-32 w-52 rounded-lg" />
         </div>
         <div className="ml-6 pt-1">
           <h4 className="font-bold text-xl">Bachelor's in Electrical and Electronics Engineering</h4>
