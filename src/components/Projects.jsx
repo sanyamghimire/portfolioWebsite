@@ -3,9 +3,7 @@ import userProfileProject from '../Images/userProfileProject.png'
 
 
 function Projects() {
-    const cardStyle = {
-        width: '200px',
-      };
+    
   return (
     <div id='projects'>
         <div className='flex items-center justify-center mt-8'>
