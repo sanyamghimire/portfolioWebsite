@@ -20,7 +20,7 @@ function Skills() {
       </div>
 
       {/* Top Row */}
-      <div className='flex flex-wrap mt-5 justify-center'>
+      <div className='flex flex-wrap mt-5 justify-center '>
         {/* HTML5 Card */}
         <div style={cardStyle} className='flex flex-col items-center border border-blue-500 p-6 rounded-lg shadow-xl mr-4 mb-4'>
           <FontAwesomeIcon icon={faHtml5} style={{color: "#f06529"}} size="4x" />

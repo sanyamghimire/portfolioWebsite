@@ -6,6 +6,7 @@ import Profile from "./components/Profile";
 import About from "./pages/About";
 import Education from "./components/Education";
 import Skills from "./components/Skills";
+import Projects from "./components/Projects";
 import Form from "./components/Form";
 import Footer from "./components/Footer";
 import ScrollToTopButton from "./components/ScrollToTopButton";
@@ -21,6 +22,7 @@ function App() {
         <About />
         <Education />
         <Skills />
+        <Projects />
         <Form />
         <Footer />
 
