@@ -1,17 +1,33 @@
-
+import React, { useEffect } from 'react';
 import skills from '../Images/Skills.png';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHtml5, faCss3Alt, faJs, faReact } from '@fortawesome/free-brands-svg-icons';
-import { SiTailwindcss } from "react-icons/si";
-import pythonLogo from '../Images/python.svg';
-import github from '../Images/github.svg';
-import git from '../Images/git.svg';
+import Rocscience from '../Images/Rocscience.jpg'
+import Udec from '../Images/Udec.jpg';
+import Flac from '../Images/FLAC.jpg';
+import Rihno from '../Images/Rihno.png';
+import Qgis from '../Images/Qgis.png';
+import Python from '../Images/Python.png';
+import R from '../Images/R.png';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+
 
 function Skills() {
   const cardStyle = {
     width: '200px',
+    position: 'relative',
   };
+  useEffect(() => {
+    AOS.init();
+  }, []);
 
+  const skillNameStyle = {
+    position: 'absolute', // Added position absolute for the skill name
+    bottom: '10px', // Adjust this value to control the distance from the bottom
+    left: '0',
+    right: '0',
+    textAlign: 'center',
+  };
   return (
     <div id="skills">
       <div className='flex items-center justify-center mt-8'>
@@ -20,57 +36,55 @@ function Skills() {
       </div>
 
       {/* Top Row */}
-      <div className='flex flex-wrap mt-5 justify-center '>
-        {/* HTML5 Card */}
-        <div style={cardStyle} className='flex flex-col items-center border border-blue-500 p-6 rounded-lg shadow-xl mr-4 mb-4'>
-          <FontAwesomeIcon icon={faHtml5} style={{color: "#f06529"}} size="4x" />
-          <h1 className='font-medium text-xl'>HTML5</h1>
+      <div data-aos='fade-down' data-aos-duration='800' data-aos-anchor-placement="center-bottom" className='flex flex-wrap mt-5 justify-center '>
+        {/* Rocscience Card */}
+        <div style={cardStyle} className='flex flex-col items-center border border-blue-500 p-6 rounded-lg shadow-xl mr-4 mb-4  transition duration-300 ease-in-out hover:scale-110'>
+          <img src={Rocscience} alt="pic of Rocscience" />
+          <h1 className='font-medium text-xl' style={skillNameStyle}>Rocscience</h1>
         </div>
 
-        {/* CSS3 Card */}
-        <div style={cardStyle} className='flex flex-col items-center border border-blue-500 p-6 rounded-lg shadow-xl mr-4 mb-4'>
-          <FontAwesomeIcon icon={faCss3Alt} style={{color: "#264de4",}} size="4x" />
-          <h1 className='font-medium text-xl'>CSS3</h1>
+        {/* Udec Card */}
+        <div style={cardStyle} className='flex flex-col items-center border border-blue-500 p-6 rounded-lg shadow-xl mr-4 mb-4  transition duration-300 ease-in-out hover:scale-110'>
+          <img src={Udec} alt="pic of Udec" />
+          <h1 className='font-medium text-xl' style={skillNameStyle}>Udec</h1>
         </div>
 
-        {/* JavaScript Card */}
-        <div style={cardStyle} className='flex flex-col items-center border border-blue-500 p-6 rounded-lg shadow-xl mr-4 mb-4'>
-          <FontAwesomeIcon icon={faJs} style={{color: "#f0db4f",}} size="4x" />
-          <h1 className='font-medium text-xl'>JavaScript</h1>
+          {/* Flac Card */}
+        <div style={cardStyle} className='flex flex-col items-center border border-blue-500 p-6 rounded-lg shadow-xl mr-4 mb-4  transition duration-300 ease-in-out hover:scale-110'>
+          <img src={Flac} alt="pic of Flac" />
+          <h1 className='font-medium text-xl' style={skillNameStyle}>Flac</h1>
         </div>
 
-        {/* ReactJS Card */}
-        <div style={cardStyle} className='flex flex-col items-center border border-blue-500 p-6 rounded-lg shadow-xl mr-4 mb-4'>
-          <FontAwesomeIcon icon={faReact} style={{color: "#61dafb",}} size="4x"/>
-          <h1 className='font-medium text-xl'>ReactJS</h1>
+
+         {/* Qgis Card */}
+         <div style={cardStyle} className='flex flex-col items-center border border-blue-500 p-6 rounded-lg shadow-xl mr-4 mb-4  transition duration-300 ease-in-out hover:scale-110'>
+          <img src={Qgis} alt="pic of Qgis" style={{ maxWidth: '120px' }} className='p-2'/>
+          <h1 className='font-medium text-xl' style={skillNameStyle}>QGIS</h1>
         </div>
       </div>
-
       {/* Bottom Row */}
-      <div className='flex flex-wrap mt-4 justify-center'>
-        {/* Tailwind css Card */}
-        <div style={cardStyle} className='flex flex-col items-center border border-blue-500 p-6 rounded-lg shadow-xl mr-4 mb-4'>
-          <SiTailwindcss  size={60} color='#06b6d4'/>
-          <h1 className='font-medium text-xl'>Tailwind CSS</h1>
+      <div data-aos='fade-down' data-aos-duration='800' data-aos-anchor-placement="center-bottom" className='flex flex-wrap mt-4 justify-center'>
+    
+
+         {/* R */}
+         <div style={cardStyle} className='flex flex-col items-center border border-blue-500 p-6 rounded-lg shadow-xl mr-4 mb-4  transition duration-300 ease-in-out hover:scale-110'>
+          <img src={R} alt="pic of R Programming" className='p-3' />
+          <h1 className='font-medium text-xl' style={skillNameStyle}>R</h1>
         </div>
+
 
         {/* PythonCard */}
-        <div style={cardStyle} className='flex flex-col items-center border border-blue-500 p-6 rounded-lg shadow-xl mr-4 mb-4'>
-          <img src={pythonLogo} alt="Python Logo" width={60} height={60} />
-          <h1 className='font-medium text-xl'>Python</h1>
+        <div style={cardStyle} className='flex flex-col items-center border border-blue-500 p-6 rounded-lg shadow-xl mr-4 mb-4  transition duration-300 ease-in-out hover:scale-110'>
+          <img src={Python} alt="pic of Python" />
+          <h1 className='font-medium text-xl' style={skillNameStyle}>Python</h1>
+        </div>
+        {/* Rihno #DCard */}
+        <div style={cardStyle} className='flex flex-col items-center border border-blue-500 p-6 rounded-lg shadow-xl mr-4 mb-4  transition duration-300 ease-in-out hover:scale-110'>
+          <img src={Rihno} alt="pic of Rihno" style={{ maxWidth: '120px' }} className='max-w-full p-2 sm:w-40 h-auto'/>
+          <h1 className='font-medium text-xl' style={skillNameStyle}>Rihno3D</h1>
         </div>
 
-        {/* Git Card */}
-        <div style={cardStyle} className='flex flex-col items-center border border-blue-500 p-6 rounded-lg shadow-xl mr-4 mb-4'>
-          <img src={git} alt="git Logo" width={60} height={60} />
-          <h1 className='font-medium text-xl'>Git</h1>
-        </div>
 
-        {/* Github Card */}
-        <div style={cardStyle} className='flex flex-col items-center border border-blue-500 p-6 rounded-lg shadow-xl mr-4 mb-4'>
-          <img src={github} alt="github Logo" width={60} height={60} />
-          <h1 className='font-medium text-xl'>GitHub</h1>
-        </div>
       </div>
     </div>
   );

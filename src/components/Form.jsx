@@ -1,10 +1,17 @@
+import React, { useEffect } from 'react';
 import { IoMdContacts, IoIosContact, IoIosSend  } from "react-icons/io";
-import contactimage from '../Images/contactimage.png';
+import contactImage from '../Images/contactimage.png';
 import { MdEmail, MdMessage } from "react-icons/md";
 import { FaPhoneAlt } from "react-icons/fa";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 
 function Form() {
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
     <div id='contact'>
       <div className=" ">
@@ -14,10 +21,10 @@ function Form() {
         </div>
 
         
-        <div className="max-w-5xl mx-auto bg-white rounded-lg shadow-xl ">
+        <div data-aos='fade-down' data-aos-duration='800' data-aos-anchor-placement="center-bottom" className="max-w-5xl mx-auto bg-white rounded-lg shadow-xl ">
           <div className="flex bg-white rounded-md justify-center items-center mt-5 ">
             <div className="mr-6">
-              <img src={contactimage} alt="pic of contact me" />
+              <img src={contactImage} alt="pic of contact me" />
             </div>
           {/* Form */}
             <div className=" md:w-1/3 p-2">
@@ -74,7 +81,7 @@ function Form() {
                 
                 <button 
                 type="submit"
-                className="btn btn-success text-white mt-3">
+                className="btn btn-success text-white mt-3  transition duration-300 ease-in-out hover:scale-110">
                   Submit
                   <IoIosSend className="text-white" size={20} />
                 </button>

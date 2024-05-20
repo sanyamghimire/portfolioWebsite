@@ -1,15 +1,14 @@
 import { BrowserRouter as Router } from "react-router-dom";
-
-
 import Header from "./components/Header";
 import Profile from "./components/Profile";
 import About from "./pages/About";
 import Education from "./components/Education";
+import Experience from './components/Experience';
 import Skills from "./components/Skills";
-import Projects from "./components/Projects";
 import Form from "./components/Form";
 import Footer from "./components/Footer";
 import ScrollToTopButton from "./components/ScrollToTopButton";
+import Publication from "./components/Publication";
 
 
 function App() {
@@ -21,11 +20,11 @@ function App() {
         <Profile />
         <About />
         <Education />
+        <Experience />
         <Skills />
-        <Projects />
+        <Publication />
         <Form />
         <Footer />
-
       </div>
     </Router>
   )
